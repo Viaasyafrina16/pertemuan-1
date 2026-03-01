@@ -1,5 +1,12 @@
 <img width="1900" height="940" alt="Screenshot 2026-02-21 100013" src="https://github.com/user-attachments/assets/918a1a24-416a-4bcb-a193-3bc2320f28d2" />
 
+TUGAS PERTEMUAN 2
+<img width="1620" height="850" alt="Screenshot 2026-03-01 103814" src="https://github.com/user-attachments/assets/27dea243-5cb1-4db4-8d16-7a4d5846ad34" />
+<img width="1655" height="891" alt="Screenshot 2026-03-01 103835" src="https://github.com/user-attachments/assets/a5e808ad-ce3a-4016-bd5b-9f4a81122712" />
+<img width="1903" height="814" alt="Screenshot 2026-03-01 103725" src="https://github.com/user-attachments/assets/34bb5ec5-2bcd-4b18-bf59-0f84f6b7149f" />
+
+
+
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
