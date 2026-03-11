@@ -6,13 +6,19 @@ TUGAS PERTEMUAN 2
 <img width="1903" height="814" alt="Screenshot 2026-03-01 103725" src="https://github.com/user-attachments/assets/34bb5ec5-2bcd-4b18-bf59-0f84f6b7149f" />
 
 TUGAS PERTEMUAN 3
+
+
 Models
 <img width="253" height="147" alt="Screenshot 2026-03-11 223739" src="https://github.com/user-attachments/assets/5390d0be-8795-4981-ad23-87a727e67c9e" />
+
+
 Migrations
 <img width="280" height="241" alt="Screenshot 2026-03-11 223831" src="https://github.com/user-attachments/assets/c1d10c66-c169-44c2-ae03-17085ef6115a" />
 <img width="574" height="903" alt="Screenshot 2026-03-11 223916" src="https://github.com/user-attachments/assets/06548ebe-2c3e-434e-9894-7f6b6643eff1" />
 <img width="604" height="927" alt="Screenshot 2026-03-11 223925" src="https://github.com/user-attachments/assets/873b8ccb-b7bc-415d-991b-a1c14edb07d0" />
 <img width="1682" height="496" alt="Screenshot 2026-03-11 223959" src="https://github.com/user-attachments/assets/a5e9ec08-960f-4704-9e70-f934722e9859" />
+
+
 Database
 <img width="1212" height="551" alt="Screenshot 2026-03-11 224021" src="https://github.com/user-attachments/assets/43b3df10-851b-49f9-88ae-57e5bc4e99ad" />
 <img width="969" height="716" alt="Screenshot 2026-03-11 224032" src="https://github.com/user-attachments/assets/fc98016b-4f43-42d8-a9ff-78c72153ced0" />
