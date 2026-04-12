@@ -11,7 +11,6 @@
                             <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Manage your product inventory</p>
                         </div>
                         <div class="flex gap-2">
-                            {{-- Button Export (Tugas Kelas B - Gate) --}}
                             @can('export-product')
                                 <a href="{{ route('product.export') }}"
                                     class="inline-flex items-center gap-2 px-4 py-2 bg-green-600 hover:bg-green-700 text-white text-sm font-medium rounded-lg transition duration-150 shadow-sm">
@@ -72,7 +71,6 @@
                                                     </svg>
                                                 </a>
 
-                                                {{-- Edit Button (Tugas Kelas B - Policy) --}}
                                                 @can('update', $product)
                                                     <a href="{{ route('product.edit', $product) }}" class="p-1.5 rounded-md text-gray-400 hover:text-amber-600 hover:bg-amber-50 dark:hover:bg-amber-900/30 transition" title="Edit">
                                                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -81,7 +79,6 @@
                                                     </a>
                                                 @endcan
 
-                                                {{-- Delete Button (Tugas Kelas B - Policy) --}}
                                                 @can('delete', $product)
                                                     <form action="{{ route('product.delete', $product->id) }}" method="POST" onsubmit="return confirm('Delete this product?')">
                                                         @csrf
@@ -100,7 +97,7 @@
                                     <tr>
                                         <td colspan="6" class="px-6 py-12 text-center text-gray-400 dark:text-gray-500">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto mb-3 opacity-40" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                                                <path stroke-linecap="round" stroke-linejoin="round" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4" />
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M20 13V6a2 2 0 00-2 2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4" />
                                             </svg>
                                             No products found.
                                         </td>

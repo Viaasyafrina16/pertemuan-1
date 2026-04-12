@@ -6,9 +6,20 @@ use App\Models\Product;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Database\QueryException;
+// PENTING: Menambahkan trait ini agar method authorize() bisa digunakan
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests; 
+// Memanggil Form Request untuk validasi
+use App\Http\Requests\StoreProductRequest;
+use App\Http\Requests\UpdateProductRequest;
 
 class ProductController extends Controller
 {
+    // PENTING: Memasang trait AuthorizesRequests di dalam class
+    use AuthorizesRequests;
+
     public function index()
     {
         $products = Product::all();
@@ -24,22 +35,48 @@ class ProductController extends Controller
             abort(403, 'Hanya Admin yang dapat melakukan export data.');
         }
 
-        // Logika export sederhana (misal: redirect dengan pesan)
+        // Logika export sederhana
         return redirect()->route('product.index')->with('success', 'Data berhasil di-export ke Excel (Simulasi)');
     }
 
-    public function store(Request $request)
+    /**
+     * Store menggunakan StoreProductRequest dengan penanganan error
+     */
+    public function store(StoreProductRequest $request)
     {
-        $validated = $request->validate([
-            'name' => 'required|string|max:255',
-            'quantity' => 'required|integer',
-            'price' => 'required|numeric',
-            'user_id' => 'required|exists:users,id',
-        ]);
+        // Mengambil data yang sudah lolos validasi
+        $validated = $request->validated();
 
-        $product = Product::create($validated);
+        // Mengambil ID user yang sedang login secara otomatis
+        $validated['user_id'] = Auth::id();
 
-        return redirect()->route('product.index')->with('success', 'Product created successfully.');
+        try {
+            Product::create($validated);
+
+            return redirect()
+                ->route('product.index')
+                ->with('success', 'Product created successfully.');
+                
+        } catch (QueryException $e) {
+            Log::error('Product store database error', [
+                'message' => $e->getMessage(),
+            ]);
+
+            return redirect()
+                ->back()
+                ->withInput()
+                ->with('error', 'Database error while creating product.');
+                
+        } catch (\Throwable $e) {
+            Log::error('Product store unexpected error', [
+                'message' => $e->getMessage(),
+            ]);
+
+            return redirect()
+                ->back()
+                ->withInput()
+                ->with('error', 'Unexpected error occurred.');
+        }
     }
 
     public function create()
@@ -56,28 +93,51 @@ class ProductController extends Controller
         return view('product.view', compact('product'));
     }
 
-    public function update(Request $request, $id)
+    /**
+     * Update menggunakan UpdateProductRequest dengan proteksi Policy
+     */
+    public function update(UpdateProductRequest $request, $id)
     {
         $product = Product::findOrFail($id);
 
-        // Proteksi Policy
+        // Proteksi Policy: Hanya pemilik yang boleh update
         $this->authorize('update', $product);
 
-        $validated = $request->validate([
-            'name' => 'sometimes|string|max:255',
-            'quantity' => 'sometimes|integer',
-            'price' => 'sometimes|numeric',
-            'user_id' => 'sometimes|exists:users,id',
-        ]);
+        // Mengambil data yang sudah lolos validasi dari UpdateProductRequest
+        $validated = $request->validated();
 
-        $product->update($validated);
+        try {
+            $product->update($validated);
 
-        return redirect()->route('product.index')->with('success', 'Product updated successfully.');
+            return redirect()
+                ->route('product.index')
+                ->with('success', 'Product updated successfully.');
+                
+        } catch (QueryException $e) {
+            Log::error('Product update database error', [
+                'message' => $e->getMessage(),
+            ]);
+
+            return redirect()
+                ->back()
+                ->withInput()
+                ->with('error', 'Database error while updating product.');
+                
+        } catch (\Throwable $e) {
+            Log::error('Product update unexpected error', [
+                'message' => $e->getMessage(),
+            ]);
+
+            return redirect()
+                ->back()
+                ->withInput()
+                ->with('error', 'Unexpected error occurred.');
+        }
     }
 
     public function edit(Product $product)
     {
-        // Proteksi Policy
+        // Proteksi Policy: Hanya pemilik yang boleh masuk ke halaman edit
         $this->authorize('update', $product);
 
         $users = User::orderBy('name')->get();
