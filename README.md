@@ -39,6 +39,12 @@ User
 <img width="1907" height="807" alt="image" src="https://github.com/user-attachments/assets/0e488db3-ee2e-4e1d-b45a-24a56b236f8c" />
 
 
+Tugas Pertemuan 6
+
+<img width="1707" height="872" alt="image" src="https://github.com/user-attachments/assets/736f9870-8280-4f2f-a7c7-37556a870f23" />
+
+
+
 
 
 
