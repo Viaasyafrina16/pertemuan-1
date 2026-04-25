@@ -47,6 +47,25 @@ Tugas Pertemuan 7
 
 <img width="1209" height="743" alt="image" src="https://github.com/user-attachments/assets/bd05836f-4c38-4cec-adc6-3933b7a1d559" />
 
+UCP 1
+
+<img width="1199" height="800" alt="image" src="https://github.com/user-attachments/assets/ffd06412-509f-4693-b84b-5ace5683597d" />
+
+<img width="1880" height="755" alt="image" src="https://github.com/user-attachments/assets/65bac77e-0db9-49ff-8269-ccd66c98bd95" />
+
+<img width="1887" height="768" alt="image" src="https://github.com/user-attachments/assets/527cc67d-7f09-4693-ba56-6537a085a309" />
+
+<img width="1849" height="784" alt="image" src="https://github.com/user-attachments/assets/bff54eb6-cca8-4fe4-a980-31684f0457b0" />
+
+<img width="1880" height="693" alt="image" src="https://github.com/user-attachments/assets/0b4d0907-a76a-40e5-ba34-09caef368c87" />
+
+
+
+
+
+
+
+
 
 
 
