@@ -11,12 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-         Schema::create('kategoris', function (Blueprint $table) {
-        $table->id();
-        $table->string('name');
-        $table->foreignId('product_id')->constrained()->onDelete('cascade');
-        $table->timestamps();
-    });
+        Schema::create('kategoris', function (Blueprint $table) {
+            $table->id();
+            $table->string('name')->unique(); // Menambahkan unique agar nama kategori tidak duplikat
+            // Baris product_id dihapus karena kategori tidak butuh ID produk
+            $table->timestamps();
+        });
     }
 
     /**

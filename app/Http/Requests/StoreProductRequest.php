@@ -16,14 +16,15 @@ class StoreProductRequest extends FormRequest
 
     /**
      * Get the validation rules that apply to the request.
-     * * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
      */
     public function rules(): array
     {
         return [
             'name' => 'required|string|max:255',
-            'quantity' => 'required|integer',
-            'price' => 'required|numeric',
+            'quantity' => 'required|integer|min:0',
+            'price' => 'required|numeric|min:0',
+            // Tambahkan baris ini agar category_id tersimpan ke database
+            'category_id' => 'required|exists:kategoris,id',
         ];
     }
 
@@ -35,9 +36,15 @@ class StoreProductRequest extends FormRequest
 
             'quantity.required' => 'Jumlah (kuantitas) produk wajib diisi.',
             'quantity.integer' => 'Jumlah produk harus berupa angka bulat (tidak boleh desimal).',
+            'quantity.min' => 'Jumlah produk tidak boleh kurang dari 0.',
 
             'price.required' => 'Harga produk wajib diisi.',
             'price.numeric' => 'Harga produk harus berupa angka yang valid.',
+            'price.min' => 'Harga produk tidak boleh kurang dari 0.',
+
+            // Pesan error untuk kategori
+            'category_id.required' => 'Kategori produk wajib dipilih.',
+            'category_id.exists' => 'Kategori yang dipilih tidak valid.',
         ];
     }
 }

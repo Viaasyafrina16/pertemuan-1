@@ -9,17 +9,22 @@ class Product extends Model
 {
     use HasFactory;
 
-    // 1. Izinkan kolom-kolom ini diisi (Mass Assignment)
     protected $fillable = [
         'name',
         'quantity',
         'price',
         'user_id',
+        'category_id', 
     ];
 
-    // 2. Buat relasi ke model User
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    // TAMBAHKAN RELASI INI
+    public function category()
+    {
+        return $this->belongsTo(Kategori::class, 'category_id'); 
     }
 }
