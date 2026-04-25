@@ -49,9 +49,13 @@ Tugas Pertemuan 7
 
 UCP 1
 
+User
+
 <img width="1199" height="800" alt="image" src="https://github.com/user-attachments/assets/ffd06412-509f-4693-b84b-5ace5683597d" />
 
 <img width="1880" height="755" alt="image" src="https://github.com/user-attachments/assets/65bac77e-0db9-49ff-8269-ccd66c98bd95" />
+
+Admin
 
 <img width="1887" height="768" alt="image" src="https://github.com/user-attachments/assets/527cc67d-7f09-4693-ba56-6537a085a309" />
 
