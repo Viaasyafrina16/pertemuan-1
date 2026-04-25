@@ -43,6 +43,11 @@ Tugas Pertemuan 6
 
 <img width="1707" height="872" alt="image" src="https://github.com/user-attachments/assets/736f9870-8280-4f2f-a7c7-37556a870f23" />
 
+Tugas Pertemuan 7
+
+<img width="1209" height="743" alt="image" src="https://github.com/user-attachments/assets/bd05836f-4c38-4cec-adc6-3933b7a1d559" />
+
+
 
 
 
