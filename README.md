@@ -64,6 +64,36 @@ Admin
 <img width="1880" height="693" alt="image" src="https://github.com/user-attachments/assets/0b4d0907-a76a-40e5-ba34-09caef368c87" />
 
 
+Tugas Pertemuan 9
+
+Prooduct
+
+<img width="1852" height="850" alt="image" src="https://github.com/user-attachments/assets/460425a2-05c7-461c-adc2-e76573b58b19" />
+
+<img width="1426" height="871" alt="image" src="https://github.com/user-attachments/assets/52ee4c07-1ccc-426c-b860-408a4478283c" />
+
+<img width="1440" height="859" alt="image" src="https://github.com/user-attachments/assets/ed27e314-a9fe-4e89-a042-119f5a840a9e" />
+
+<img width="1392" height="867" alt="image" src="https://github.com/user-attachments/assets/d876a6d3-5bcd-4496-a606-e4dc07ebd026" />
+
+Kategori
+
+
+<img width="1354" height="806" alt="image" src="https://github.com/user-attachments/assets/a4e2729a-4fe4-4996-884f-108b5cf8c5e7" />
+
+<img width="1397" height="847" alt="image" src="https://github.com/user-attachments/assets/9d37d0a4-45c1-4cfd-9e00-d86d1ff91f96" />
+
+<img width="1414" height="853" alt="image" src="https://github.com/user-attachments/assets/e6356009-cf88-4081-b47e-4f3a2ba99e3d" />
+
+<img width="1302" height="771" alt="image" src="https://github.com/user-attachments/assets/3ac728cb-a81b-4826-a008-85cf1a816d56" />
+
+
+
+
+
+
+
+
 
 
 
