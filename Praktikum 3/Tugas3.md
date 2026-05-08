@@ -1,2 +1,2 @@
 ### Models
-![](SS/image.png)
+![](image.png)
